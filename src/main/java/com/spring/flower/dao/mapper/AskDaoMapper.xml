@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.flower.dao.ADao">
+	
+	<select id="askList" resultType="com.spring.flower.dto.AskVO">
+		select * from ask where id= #{param1} order by qNum desc
+	</select>
+	
+	<select id="askListTopNum" resultType="com.spring.flower.dto.AskVO">
+		select * from ask where pNum= #{param1} order by qNum
+	</select>
+	
+		
+	<insert id="insertAsk">
+		insert into ask( qNum, id, q_title, q_contents, q_category, pNum )
+		values(ask_seq.nextval, 
+		#{id}, #{q_title}, #{q_contents}, #{q_category}, #{pNum} )
+	</insert>
+	
+	<select id="getOneAsk" resultType="com.spring.flower.dto.AskVO">
+		select * from ask where qNum = #{param1}
+	</select>
+	
+	<select id="getAsk" resultType="com.spring.flower.dto.AskVO">
+		select * from ask where qNum = #{param1}
+	</select>
+	
+	<update id="updateAsk">
+		update ask set 
+		q_title=#{q_title}, q_category=#{q_category}, q_contents=#{q_contents} 
+		where qNum=#{qNum}
+	</update>
+	
+	<delete id="deleteAsk">
+		delete ask where qNum = #{param1} 
+	</delete> 
+	
+	<select id="listAllAsk" resultType="com.spring.flower.dto.AskVO">
+		select * from ask order by q_date desc
+	</select>
+	
+	<update id="updateAskReply">
+		update ask set reply=#{reply} , replyornot='y' where qNum=#{qNum} 
+	</update>
+		
+	<select id="search" resultType="com.spring.flower.dto.AskVO">
+		select * from ask where q_title like '%'||#{param1}||'%' order by qnum desc
+	</select>
+	
+</mapper>

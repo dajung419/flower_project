@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.flower.dao.ODao">
+	
+	<insert id="insertOrder">
+		insert into orders values(orderNum_seq.nextval,
+			 #{id}, #{pNum}, #{orderQ}, sysdate, #{sign}, #{o_price})
+	</insert>
+	
+	<select id="selectAllCartList" resultType="com.spring.flower.dto.CartVO">
+		select * from orders o, product p  
+			where o.pnum = p.pnum and id = #{param1} 
+			and sign = 'n' order by ordernum
+	</select>
+	
+	<delete id="deleteCart">
+		delete orders where ordernum= #{param1} 
+	</delete> 
+	
+	<update id="updateCartToOrder">
+		update orders set sign='y', orderdate = sysdate where ordernum = #{param1} 
+	</update>
+	
+	<update id="updateCartOrderQty">
+		update orders set orderq = #{param2} , o_price = #{param3} 
+		where ordernum= #{param1} 
+	</update>
+	
+	<select id="ViewCartList" resultType="com.spring.flower.dto.CartVO">
+		select * from orders o, product p 
+			where o.pnum = p.pnum and id = #{param1} 
+			and sign = 'y' order by ordernum
+	</select>
+	
+	<select id="getOrderPoint" resultType="_int">
+		select o_price from orders where orderNum = #{param1}
+	</select>
+	
+	<select id="Detail" resultType="com.spring.flower.dto.CartVO">
+		select * from orders o, product p 
+			where o.pnum = p.pnum and orderNum = #{param1}
+	</select>
+	
+	<select id="listOrder" resultType="com.spring.flower.dto.OrderVO">
+		select * from orders where id like '%'||#{param1}||'%' 
+		order by sign, orderNum desc
+	</select>
+	
+	<update id="updateOrderResult">
+		update orders set sign='y' where orderNum=#{param1}
+	</update>
+	
+</mapper>

@@ -1,0 +1,342 @@
+﻿
+.items p{
+	margin: -2px;
+	padding : 2px;
+}
+
+.page_area{
+	vertical-align : bottom;
+	height: 80px;
+}
+.product_pic{
+    width: 440px;
+    height: 440px;
+}
+#sell_p_table{
+    width: 100%;
+}
+.underBorder1{
+    border-bottom: 1px solid black;
+    height: 5px;
+}
+.underBorder2{
+    border-bottom: 2px solid black;
+    height: 5px;
+}
+.underBorder3{
+    border-bottom: 3px solid black;
+    height: 5px;
+}
+.small_pic img{
+    width: 80px;
+    height: 80px;
+}
+.text_center{
+    text-align: center;
+}
+#small_pic_table{
+    width: 448px;
+    color: gray;
+    text-align: center;
+}
+.confirm_btn{
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 5px;
+  }
+  .back_btn{
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(168, 168, 168);
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 5px;
+  }
+  .selectO{
+      width: 400px;
+      height: 30px;
+      border: 1px solid rgb(168, 168, 168);
+  }
+  .body2{
+    margin: 5% 3% 5% 3%;
+  }
+  .flex_row div{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+    padding: 0;
+  }
+  .p_description{
+      width: 100%;
+      border-collapse: collapse;
+  }
+  .p_description td{
+    height: 50px;
+    text-align: center;
+    border: 1px solid rgb(168, 168, 168);
+    width: 25%;
+    color:  rgb(61, 61, 61);
+  }
+  .p_description:hover{
+    cursor: pointer;
+  }
+  .select_menu ~ div{
+    display: none;
+    margin: 0px 15% 0px 15%;
+  }
+.snsBtn:hover{
+    cursor: pointer;
+}
+.snsBtn ~ div{
+    display: none;
+}
+ #snsArea{
+     position: absolute;
+     display: flex;
+ }
+
+
+
+.under_gray_Border1{
+    border-bottom: 1px solid rgb(168, 168, 168);
+    height: 7px;
+    padding: 0px;
+}
+
+.text_center{
+    text-align: center;
+}
+#small_pic_table{
+    width: 448px;
+    color: gray;
+    text-align: center;
+}
+.btn1_style{
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 5px;
+  }
+.btn2_style{
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(168, 168, 168);
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 5px;
+}
+.btn3_style{
+    text-align: center;
+    width: 80px;
+    height: 35px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(168, 168, 168);
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 0px 5px 5px 500px;
+  }
+ .r_pic{
+     width: 130px;
+     height: 130px;
+ }
+ .p_pic{
+     width: 130px;
+     height: 130px;
+ }
+ #review_table{
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+#review_table .paddingZone{
+    padding: 10px;
+}
+#review2_table{
+    width: 100%;
+    border-top: 1px solid black;
+    margin-top: 70px;
+}
+.rev_title{
+    height: 50px;
+    background-color: rgb(233, 233, 233);
+    border-top: 1px solid black;
+    border-bottom: 1px solid rgb(168, 168, 168);
+}
+.rev_title input{
+	margin-left : 9%;
+    background-color: rgb(245, 245, 245);
+    border : 1px solid rgb(168, 168, 168);
+    width: 70%;
+    height: 50px;
+	font-size: 12pt;
+}
+.rev_name{
+    height: 50px;
+    font-size: 12pt;
+}
+.rev_score{
+    height: 50px;
+}
+#aa{
+	font-size: 18pt;
+}
+.rev_rev{
+    height: 50px;
+    background-color: rgb(233, 233, 233);
+    border-top: 1px solid rgb(168, 168, 168);
+}
+.btn_area{
+    float: right;
+    margin: 20px;
+}
+.rev_delete:hover{
+    cursor: pointer;
+}
+.rev_area{
+	margin-top : 15px;
+	vertical-align : bottom;
+}
+
+.input_title{
+	border-top: 1px solid rgb(168, 168, 168);
+	width: 300px;
+    height: 35px;
+}
+
+
+.container {
+	margin: auto;
+	position: flex;
+	background-color:#fff;
+}
+.askBody{
+	display: block;
+	margin : 250px -10% 0px -10%;
+	background-color: white;
+}
+#product_table{
+	width:100%;
+	height: 100px;
+	margin: -10px 0px 20px 0px;
+	padding: 10px 0px;
+	border-top: 1px solid rgb(168, 168, 168);
+	border-bottom: 1px solid rgb(168, 168, 168);
+}
+
+#product_table td{
+	padding : 10px 0px;
+}
+
+#askBtn{
+	float: right;
+}
+
+/* 리뷰 글쓰기 */
+
+#rvp_table{
+	width:70%;
+    margin-bottom: 30px;
+    text-align:left;
+}
+
+.rr1{
+	width:20px;
+}
+
+.reviewW{
+	padding: 0px 30px;
+	margin: 20px;
+}
+#reviewWrite_table{
+	margin-top:30px;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    border-top: 1px solid rgb(168, 168, 168);
+    border-bottom:1px dotted rgb(168, 168, 168);
+}
+.titleW{
+	float: left;
+	font-size: 16px;
+	
+}
+.passW{
+    margin-left: 400px;
+	font-size: 16px;
+	
+}
+
+.rhead2_3{
+	float: right;
+
+}
+.rhead3{
+	height:500px;
+	width:100%;
+	
+
+}
+#W_stable{
+	width:100%;
+    padding: 0px;
+    border-top: 1px dotted rgb(168, 168, 168);;
+    border-bottom: 1px solid rgb(168, 168, 168);
+}
+.revW_score{
+    font-size: 15px;
+    vertical-align: bottom;
+}
+
+.revW2_2 {
+    width: 70px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    font-family: "nanumsquare";
+	margin-left:380%;	
+}
+
+.revW2_2:hover{
+    cursor: pointer;
+}
+
+.search {
+	margin: 40px 10% 30px 10%;
+}
+.searchResult {
+	margin: 0px 5% 15px 5%;
+	height: 590px;
+	border: 1px solid rgb(168, 168, 168);
+}
+fieldset{
+	margin : 10px;
+	height: 160px;
+}
+fieldset table{
+	border-collapse: collapse;
+	width: 480px;
+}
+fieldset table td, fieldset table th{
+	border: 1px solid rgb(168, 168, 168);
+}
+.bold{
+	color:rgb(167, 67, 0);
+}

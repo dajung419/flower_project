@@ -1,0 +1,303 @@
+@charset "EUC-KR";
+@charset "utf-8";
+
+	/*마이페이지*/
+	.myHeader{
+		height: 150px;
+	}
+	.mypage_btn{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 600px;
+	}
+	.mypage_btn ul{
+		margin-bottom: 1%;
+	}
+	.mypage_btn ul li {
+		margin: 1%;
+		width: 46%;
+		display: inline-block;
+	}
+	.mybtn img {
+		width: 100%;
+		height: 100%;
+		border: 1px solid black;
+	}
+
+	
+		
+  /* mypage_1(적립금) */
+
+ 
+  .my1Header{
+	width:100%; 
+	height:30%;
+  }
+  .my1Header h2{
+	 text-align: center;
+  }
+  .mypagebar{
+	margin-top: 50px;
+	float:left; text-align:center; 
+	width: 1200px;
+	font-size: 15px;
+	padding: 5px;
+  }
+  
+  .mypagebar a{
+	  text-decoration: none;
+  }
+
+  .mypagebar li{
+	display:inline-block; text-align:center;
+	margin-left: 25px;
+	margin-right:25px;
+	border-radius: 40px;
+	background-color:white;
+	border : 1px solid rgb(175, 175, 175);
+	padding : 20px 40px 20px 40px;
+  }
+  
+  .m1 ,.m2 ,.m3 ,.m4 ,.m5{
+  width:75px;
+  height:20px;
+  }
+  #chunkuan{
+	 
+	  margin-top: 250px;
+	  width: 1600px;
+	  
+  }
+  #chunkuan  ul li{
+	  display: inline-block;
+	  margin-left: 50px;
+	  
+
+  }
+  #chunkuan  ul {
+	  margin-left: 500px;
+  }
+ .ck{
+ 	padding-top : 14px;
+  	 text-align: center;
+	 border-radius: 40px;
+	 background-color: rgb(243, 243, 243);
+	 width: 240px;
+	 height: 35px;
+ }
+ 
+ table.type10 {
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+	margin: 20px 10px;
+	
+	margin-top: 80px;
+	font-size: 15px;
+	width: 1200px;
+}
+table.type10 thead th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+    background: #757575;
+    margin: 20px 10px;
+}
+table.type10 tbody th {
+    width: 150px;
+    padding: 10px;
+}
+table.type10 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+}
+table.type10 .even {
+    background: #eeeeee;
+}
+/* mypage_2 주문조회 */
+#order{
+	 
+	margin-top: 250px;
+	width: 1600px;
+	
+}
+table.type11 {
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+	margin: 20px 10px;
+	
+	margin-top: 80px;
+	font-size: 15px;
+	width: 1200px;
+}
+table.type11 thead th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+    background: #757575;
+    margin: 20px 10px;
+}
+table.type11 tbody th {
+    width: 150px;
+    padding: 10px;
+}
+table.type11 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+}
+/* mypage_3 1:1문의 */
+#ask{
+	margin-top: 250px;
+}
+
+table.type12 {
+  border-collapse: collapse;
+  text-align: center;
+  line-height: 1.5;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 10px;
+  margin-top: 80px;
+  font-size: 15px;
+  width: 100%;
+}
+table.type12 thead th {
+
+  width: 100px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  color: #fff;
+  background: #757575;
+  margin: 20px 10px;
+}
+.type12 tr td:nth-child(3){
+	width: 50px;
+	text-align: center;
+
+}
+
+
+table.type12 tbody th {
+  width: 100px;
+  padding: 10px;
+}
+table.type12 td {
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+}
+table.type12 .even {
+  background: #eeeeee;
+}
+
+.ask2{
+	float:right;
+	text-align: center;
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin : 20px 0px;
+}
+
+/* mypage_5 탈퇴 */
+#cancle{
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 14pt;
+	width: 100%;
+	height: 450px;
+	border: 5px double #757575;
+	border-radius: 15px;
+	margin-top: 300px ;
+}
+
+.cancle_2{
+	text-align: center;
+	margin: 10% 15% 0px 15%;
+	padding-top: 35px;
+	width: 70%;
+	border:5px double #ccc;
+	background-color: #e6e0e0;
+	height: 80px;
+}
+
+.ccbt{
+	margin-top: 30px;
+	font-weight: bold;
+	width: 70px;
+	height: 40px;
+	background-color: white;
+}
+/* mypage4 정보수정 */
+
+
+.body1.joinm{
+    margin: 280px 0px 0px 0px;
+    padding: 0;
+    width: 100%;
+    height: 850px;
+  }
+.body1.joinm form{
+	margin-top:100px;
+	margin-bottom: 80px;
+} 
+  #joinTbm{
+    
+    padding: 50px;
+    text-align: center;
+    height: 750px;
+    width: 100%;
+    border: 2px solid rgb(168, 168, 168);
+  }
+  .joinm table .inputBox{
+    width: 180px;
+    height: 25px;
+    border: 1px solid rgb(168, 168, 168);
+  }
+
+ 
+   .joinm th,.joinm td{
+    text-align: left;
+  }
+  
+  .joinm #col{
+    width:1050px;
+    margin-top:50px;
+    margin-right:500px;
+    text-align: center;
+   
+  }
+  .joinm .coll{
+   text-align: center;
+    width: 250px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 0px;
+  }
+  
+  .spacem{
+    width: 100px;
+  }
+
+ 

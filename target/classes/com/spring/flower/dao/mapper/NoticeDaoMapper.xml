@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.flower.dao.NDao">
+	
+	<select id="dataCount" resultType="_int">
+		select count(noti_title) ncount from notice
+	</select>
+	
+	<select id="listNotice" resultType="com.spring.flower.dto.NoticeVO">
+		<![CDATA[
+		select * from 
+			(select rownum m, notinum, id, noti_title, noti_contents, noti_date, noti_true from 
+			(select notinum, id, noti_title, noti_contents, noti_date, noti_true from notice 
+				where noti_true = #{param3} 
+				order by notinum desc)sub 
+				where rownum <= #{param1}*#{param2} ) 
+				where m >= (#{param1}-1)*#{param2}+1
+		]]>
+	</select>
+	
+	<select id="selectOneBoard" resultType="com.spring.flower.dto.NoticeVO">
+		select * from notice where notiNum = #{param1}
+	</select>
+	
+	<!-- admin -->
+	<select id="selectAllBoards" resultType="com.spring.flower.dto.NoticeVO">
+		select * from notice where noti_true= 'y' order by notiNum desc
+	</select>
+	
+	<select id="selectAllFaqBoards" resultType="com.spring.flower.dto.NoticeVO">
+		select * from notice where noti_true= 'n' order by notiNum desc
+	</select>
+	
+	<insert id="insertBoard">
+		insert into notice(notiNum, id, noti_title, noti_contents, noti_true) 
+			values(notice_seq.nextval, 
+			#{id}, #{noti_title}, #{noti_contents}, #{noti_true}) 
+	</insert>
+	
+	<update id="updateBoard">
+		update notice set id=#{id}, noti_title=#{noti_title}, 
+			noti_contents=#{noti_contents}, noti_true=#{noti_true} 
+			where notiNum=#{notiNum}
+	</update>
+	
+	<delete id="deleteBoard">
+		delete notice where notiNum=#{param1}
+	</delete>
+	
+</mapper>

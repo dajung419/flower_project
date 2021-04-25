@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.flower.dao.RDao">
+	
+	<select id="listReview" resultType="com.spring.flower.dto.ReviewVO">
+		select * from 
+			(select rownum m, rev_num, rev_pass, rev_title, rev_contents, rev_date, 
+			rev_update, rev_click, rev_rev, rev_score, rev_pic, orderNum, id, p_pic from 
+			(select rev_num, rev_pass, rev_title, rev_contents, rev_date, rev_update, 
+			rev_click, rev_rev, rev_score, 
+			rev_pic, orderNum, id, 
+            (select pic from product where pnum = 
+            (select pnum from orders where ordernum = review.orderNum)) p_pic
+            from review order by rev_num desc)sub 
+		<![CDATA[
+			where rownum <= #{param1}*#{param2} ) where m >= (#{param1}-1)*#{param2}+1
+		]]>
+	</select>
+		
+	<select id="listProductPic" resultType="String">
+		select pic from product where pnum = (select pnum from orders where ordernum = #{param1} )  
+	</select>
+	
+	<select id="listProductReview" resultType="com.spring.flower.dto.ReviewVO">
+		select * from review where ordernum in (select ordernum from orders where pnum = #{param1}) 
+	</select>
+	
+ 	<select id="dataCount" resultType="_int">
+		select count(rev_num) rcount from review
+	</select>
+	
+	<insert id="writeReview">
+		insert into review (
+			rev_num, rev_pass, rev_title, rev_contents, rev_score, rev_pic, orderNum, id) 
+			values (review_seq.nextval, 
+			#{rev_pass}, #{rev_title}, #{rev_contents}, #{rev_score}, #{rev_pic}, #{orderNum}, #{id})
+	</insert>
+	
+	<select id="getReview" resultType="com.spring.flower.dto.ReviewVO">
+		select * from review where rev_num = #{param1}
+	</select>
+	
+	<update id="updateRevReview">
+		update review set rev_rev=#{rev_rev} where rev_num=#{rev_num}
+	</update> 
+	
+	<update id="deleteRevReview">
+		update review set rev_rev=#{rev_rev} where rev_num = #{rev_num} 
+	</update> 
+	
+	<update id="updateReadCount">
+		update review set rev_click=rev_click+1 where rev_num = #{param1} 
+	</update> 
+	
+	<update id="updateReview">
+		update review set rev_score=#{rev_score}, rev_title=#{rev_title}, 
+		rev_contents=#{rev_contents}, rev_pic=#{rev_pic} where rev_num=#{rev_num} 
+	</update> 
+	
+	<delete id="deleteReview">
+		delete review where rev_num=#{param1}
+	</delete> 
+	
+	<select id="getPrevRevNum" resultType="String">
+		SELECT prev_num FROM( SELECT  rev_num, 
+		           LAG(rev_num) OVER (ORDER BY rev_num) prev_num 
+		           FROM    review 
+		           ORDER BY rev_num ) 
+		       WHERE rev_num = #{param1} 
+	</select>
+	
+	<select id="getNextRevNum" resultType="String">
+		SELECT next_num FROM( SELECT  rev_num, 
+		           LEAD(rev_num) OVER (ORDER BY rev_num) next_num 
+		           FROM    review 
+		           ORDER BY rev_num ) 
+		       WHERE rev_num = #{param1} 
+	</select>
+	
+	<select id="search" resultType="com.spring.flower.dto.ReviewVO">
+		select * from review where rev_title like '%'||#{param1}||'%' order by rev_num
+	</select>
+	
+</mapper>

@@ -1,0 +1,69 @@
+@charset "EUC-KR";
+@charset "utf-8";
+/* BASIC css start */
+/* °øÅë */
+.find_idpw { font-size:12px; color:#777; text-align: left; line-height:22px;  }
+.find_idpw img { border: 0 none; vertical-align: middle; }
+.find_idpw a,
+.find_idpw a:hover,
+.find_idpw select,
+.find_idpw input { vertical-align: middle; text-align: left;  }
+.find_idpw .input-radio { width:12px; height:12px; margin:-2px 0 0; padding:0; }
+
+.find_idpw .tit { margin:0; padding-bottom: 20px; border-bottom: 2px solid #3b4453; font: 20px "Noto Sans KR"; font-weight: 500; line-height:20px; color:#333; }
+
+.find_idpw .sub-tit { margin:10px 0 40px; }
+.find_idpw .radio-wrap { margin:0 0 10px; }
+.find_idpw .radio-wrap label { margin-right:30px; color:#575757; font-weight:bold; font-size:14px; }
+.find_idpw .find-info table { width:100%; border-spacing:0; border-collapse:collapse; font-size:12px;    border:1px solid #ddd; }
+.find_idpw .find-info table caption { display:none; }
+.find_idpw .find-info table th { font-weight: bold; font-size:15px; color:#767678; background:#fff; text-align:center; }
+.find_idpw .find-info table th div,
+.find_idpw .find-info table td div { padding:15px 0; }
+.find_idpw .find-info table td div { padding-left: 12px; }
+.find_idpw .MS_input_txt { width: 150px; height: 20px; line-height:22px; border: 1px solid #e3e3eb; }
+.find_idpw tr.user-name th,
+.find_idpw tr.user-name td { border-bottom: 1px solid #ececee; }
+.find_idpw .btn-area { padding:20px 0 50px; text-align: center; }
+
+#find_id { margin-top:50px; width:100%;}
+/* ¾ÆÀÌÇÉ */
+.find_idpw .ipin-confirm { padding: 20px 0; border: 3px solid #d4d4d4; text-align: center; background:#fdfdfd; }
+.find_idpw .ipin-confirm dt { margin-bottom: 25px; font-size: 14px; }
+.find_idpw .ipin-confirm a.ipin-svc { margin:0 10px; font-size: 14px; font-weight: bold; color: #d63449; text-decoration: underline; }
+/* BASIC css end */
+.body1.find{
+	display: block;
+	margin: 50px 30% 8% 30%;
+	background-color: white;
+}
+/* 버튼 */ 
+.buttonPro { margin: 0 3px; vertical-align: middle; display: inline-block; text-decoration: none; outline: none; cursor: pointer; font-size: 12px; padding: 8px 11px 10px; color: #555; background: #fff; font-family: "Noto Sans KR"; font-weight: 500; transition: background-color 0.3s; }
+.buttonPro:hover, .buttonPro:focus { color: #eee; background: #555; transition: background-color 0.3s; font-weight: 500; }
+.buttonPro:active { position: relative; top: 1px; color: #555; background: #efefef; }
+.buttonPro.rounded { border-radius: 5px; }
+.buttonPro.xrounded { border-radius: 50px; }
+input.buttonPro, button.buttonPro { *width: auto; /* IE7 Fix */
+*overflow: visible; /* IE7 Fix */
+}
+.buttonPro img { border: none; vertical-align: bottom; }
+/* 버튼사이즈 */
+.buttonPro.xsmall { padding: 5px 7px; font-size: 12px; }
+.buttonPro.small { padding: 6px 11px; font-size: 12px; }
+.buttonPro.large { padding: 15px 20px; font-size: 12px; }
+.buttonPro.xlarge { padding: 20px 30px; font-size: 15px; }
+.buttonPro.xxlarge { padding: 22px 33px; font-size: 17px; }
+.buttonPro.mb { padding: 20px 19px; font-size: 17px; letter-spacing: 1px; }
+.buttonPro.icon { padding: 3px 7px; border-radius: 3px; font-size: 11px; }
+/* 버튼 컬러 BLACK */ 
+.buttonPro.black { background: #353535; color: #fff; border: 1px solid #111; }
+.buttonPro.black:hover  { background: #555; border: 1px solid #555; color: #fad9dc; font-weight: 500; }
+.buttonPro.black:active { background: #222; }
+/* 버튼 컬러 BLACK */ 
+.buttonPro.gray { background: #e9e9e9; color: #555; border: 1px solid #ddd; }
+.buttonPro.gray:hover, .buttonPro.black:focus { background: #ddd; border: 1px solid #ddd; color: #777; font-weight: 500; }
+.buttonPro.gray:active { background: #ccc; }
+/* 버튼 컬러 WHITE */ 
+.buttonPro.white { background: #fff; color: #555; border: 1px solid #ccc; }
+.buttonPro.white:hover, .buttonPro.white:focus { background: #dedede; color: #555; }
+.buttonPro.white:active { background: #ddd; }

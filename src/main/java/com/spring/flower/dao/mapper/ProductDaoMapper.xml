@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.flower.dao.PDao">
+	
+	<select id="getProduct" resultType="com.spring.flower.dto.ProductVO">
+		select * from product where pNum = #{param1}
+	</select>
+	
+	<select id="bestListKindProduct" resultType="com.spring.flower.dto.ProductVO">
+		<![CDATA[
+		select * from product where medium= #{param1} 
+		and bestyn like 'y' 
+		and useyn like 'y' 
+		and ROWNUM <= 4 order by pnum desc
+		]]>
+	</select>
+	
+	<select id="listKindProduct" resultType="com.spring.flower.dto.ProductVO">
+		<![CDATA[
+		select * from 
+		 (select rownum m, pnum, pname, price, stock, pic, useyn, bestyn from 
+		 (select pnum, pname, price, stock, pic, useyn, bestyn from product 
+			where medium = #{param1}
+			and useyn like 'y' 
+			order by pnum desc)sub 
+			where rownum <= #{param2}*#{param3} order by pnum desc) 
+			where m >= (#{param2} - 1) * #{param3} + 1
+		]]>
+	</select>
+	
+	<select id="SearchlistProduct" resultType="com.spring.flower.dto.ProductVO">
+		<![CDATA[
+		select * from 
+		 (select rownum m, pnum, major, medium, pname, price, stock, pic, useyn, bestyn from 
+		 (select pnum, major, medium, pname, price, stock, pic, useyn, bestyn 
+		 	from product 
+		 	where pname like '%'||#{param3}||'%'
+			order by pnum desc)sub 
+			where rownum <= #{param1}*#{param2} order by pnum desc) 
+			where m >= (#{param1} - 1) * #{param2} + 1
+		]]>
+	</select>
+	
+	<select id="PdataCount" resultType="_int">
+		select count(pnum) pcount from product
+	</select>
+	
+	<select id="dataCount" resultType="_int">
+		select count(pnum) pcount from product where medium= #{param1}
+	</select>
+	
+	<select id="getProductByOrderNum" resultType="com.spring.flower.dto.ProductVO">
+		select * from product where pnum = 
+		(select pNum from orders where ordernum = #{param1}) 
+	</select>
+	
+	<select id="totalRecord" resultType="_int">
+		<![CDATA[
+		select count(*) from product where pName like '%'||#{param1}||'%'
+		]]>
+	</select>
+	
+	<select id="selectProductByCode" resultType="com.spring.flower.dto.ProductVO">
+		select * from product where pNum = #{param1}
+	</select>
+	
+	<insert id="insertProduct">
+		insert into product (
+			pNum, major, medium, pName, price, stock, content, pic,bestyn,useyn) 
+			values(product_seq.nextval, #{major}, #{medium}
+			, #{pName}, #{price}, #{stock}, #{content}, #{pic},#{bestyn},#{useyn})
+	</insert>
+	
+	<update id="updateProduct">
+		update product set major=#{major}, medium=#{medium}, pName=#{pName}
+			, price=#{price}, stock=#{stock}, content=#{content}, pic=#{pic}
+			, bestyn=#{bestyn}, useyn=#{useyn} where pNum=#{pNum}
+	</update>
+	
+	<update id="deleteProduct">
+		update product set useyn='n' where pNum = #{param1} 
+	</update> 
+	
+	<select id="search" resultType="com.spring.flower.dto.ProductVO">
+		select * from product where pName like '%'||#{param1}||'%' and useyn = 'y' order by pnum desc
+	</select>
+	
+</mapper>

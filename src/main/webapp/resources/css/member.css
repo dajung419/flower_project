@@ -1,0 +1,90 @@
+﻿/* login */
+.login.body1{
+    margin: 0px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+}
+
+.login.body1 h1 {
+	margin: 0;
+	padding: 50px;
+}
+
+.idpw input {
+	width: 390px;
+	height: 45px;
+	margin-bottom: 1px;
+}
+
+.loginBtn {
+	width: 400px;
+	height: 50px;
+	background-color: black;
+	color: white;
+	border: 0px;
+	font-weight: bold;
+	font-family: "nanumsquare";
+	margin: 30px;
+}
+
+.loginMenu li {
+	display: inline;
+	margin: 20px;
+}
+
+/* join */
+.join.body1{
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+  }
+  .join.body1 h1{
+    margin: 0px auto 20px auto;
+    padding: 0px;
+    text-align: center;
+  }
+  #joinTb{
+    margin: 0px auto;
+    padding: 50px;
+    text-align: center;
+    height: 750px;
+    width: 1050px;
+    border: 2px solid rgb(168, 168, 168);
+  }
+
+  #joinTb .inputBox{
+    width: 180px;
+    height: 25px;
+    border: 1px solid rgb(168, 168, 168);
+  }
+  .join th,.join td{
+    text-align: left;
+  }
+  #col{
+    width: 1050px;
+    margin: 50px auto 0px auto;
+  }
+  .coll{
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 0px;
+  }
+  .coll.coll1{
+    margin-left: 51%;
+  }
+  .space{
+    width: 100px;
+  }
+  

@@ -1,0 +1,285 @@
+﻿
+ #con1 {
+    width: auto;
+    height: 400px;
+    background-color: wheat;
+}
+
+.bestP{
+	width: 100%;
+	text-align: center;
+	margin: 20px 0px -30px 0px;
+	padding: 50px 0px 0px 0px;
+}
+
+.page_area{
+	vertical-align : bottom;
+	height: 100px;
+}
+
+.mySlides {
+    display: none
+}
+
+#con1 img {
+    width: auto;
+    height: 400px;
+}
+
+.slideshow-container {
+    width: auto;
+    height: 400px;
+    position: relative;
+    margin: auto;
+}
+
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    height: 170px;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+.borderLine{
+	border : 3px solid black;
+}
+
+.product_pic img{
+    width: 400px;
+    height: 400px;
+}
+#sell_p_table{
+    width: 100%;
+}
+.underBorder1{
+    border-bottom: 1px solid black;
+    height: 5px;
+}
+.underBorder2{
+    border-bottom: 2px solid black;
+    height: 5px;
+}
+.underBorder3{
+    border-bottom: 3px solid black;
+    height: 5px;
+}
+.small_pic img{
+    width: 80px;
+    height: 80px;
+}
+.text_center{
+    text-align: center;
+}
+.search_pic img{
+    width: 40px;
+    height: 40px;
+}
+#small_pic_table{
+	margin-top : 50px;
+	margin-bottom : 50px;
+    width: 448px;
+    color: gray;
+    text-align: center;
+}
+.confirm_btn{
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 5px;
+  }
+  .back_btn{
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(168, 168, 168);
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 5px;
+  }
+  .selectO{
+      width: 400px;
+      height: 30px;
+      border: 1px solid rgb(168, 168, 168);
+  }
+  .body2{
+    margin: 5% 3% 10% 3%;
+  }
+  .flex_row div{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+    padding: 0;
+  }
+  .p_description{
+      width: 100%;
+      border-collapse: collapse;
+  }
+  .p_description td{
+    height: 50px;
+    text-align: center;
+    border: 1px solid rgb(168, 168, 168);
+    width: 25%;
+    color:  rgb(61, 61, 61);
+  }
+  .p_description:hover{
+    cursor: pointer;
+  }
+  .select_menu ~ div{
+    display: none;
+    margin: 0px 15% 0px 15%;
+  }
+.snsBtn:hover{
+    cursor: pointer;
+}
+.snsBtn ~ div{
+    display: none;
+}
+ #snsArea{
+     position: absolute;
+     display: flex;
+     margin : 15px 0px 0px -30px;
+     padding: 5px;
+ }
+ #snsArea img{
+   margin-left: 10px;
+   width:25px;
+   height:25px;
+ }
+ .text_size3{
+ 	font-size : 12pt;
+ 	font-weight: bold;
+ 	height: 50px;
+ }
+.btn1_style{
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 5px;
+  }
+  .btn2_style{
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(168, 168, 168);
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 5px;
+}
+  .btn3_style{
+    text-align: center;
+    width: 65px;
+    height: 25px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(168, 168, 168);
+    font-weight: bold;
+    font-family: "nanumsquare";
+    margin: 5px;
+    border-radius: 40px;
+}
+
